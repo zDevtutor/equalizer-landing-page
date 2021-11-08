@@ -1,33 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Equalizer landing page</title>
-</head>
-<body>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="assets/images/favicon-32x32.png"
+		/>
 
-  We make your music sound extraordinary.
+		<link
+			href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
 
-  A system audio equalizer specifically designed for Android and iOS. Freely tune the 
-  way your music sounds with a professional grade parametric EQ & volume mixer. Control 
-  bass, mids, treble, gain control, reverb, and more!
+		<link rel="stylesheet" href="assets/styles/main.comp.css" />
+		<title>Frontend Mentor | Equalizer landing page</title>
+	</head>
+	<body>
+		<div class="container">
+			<header class="header">
+				<div class="logo-box">
+					<img
+						src="./assets/images/logo.svg"
+						alt="equalizer logo"
+						class="logo"
+					/>
+				</div>
+			</header>
 
-  Premium EQ
+			<section class="showcase">
+				<h1 class="showcase-heading">
+					We make your music sound extraordinary.
+				</h1>
+				<p class="showcase__content">
+					A system audio equalizer specifically designed for Android and iOS.
+					Freely tune the way your music sounds with a professional grade
+					parametric EQ & volume mixer. Control bass, mids, treble, gain
+					control, reverb, and more!
+				</p>
+			</section>
 
-  Get expert-level control with a robust equalizer, volume mixer, and spatial audio. Take 
-  your listening experience to a whole new level and access all our incredible features!
+			<section class="equalizer">
+				<div class="equalizer__img-box">
+					<img
+						src="./assets/images/illustration-app.png"
+						alt="equalizer phone"
+						class="equalizer__img"
+					/>
+				</div>
+				<div class="equalizer-card">
+					<h2 class="equalizer-card__heading">Premium EQ</h2>
+					<p class="equalizer-card__content">
+						Get expert-level control with a robust equalizer, volume mixer, and
+						spatial audio. Take your listening experience to a whole new level
+						and access all our incredible features!
+					</p>
+					<p class="equalizer-card__price">
+						<span class="display-1">$4</span> / month
+					</p>
+					<a href="#" class="btn btn--primary"
+						><img
+							src="./assets/images/icon-apple.svg"
+							alt="icon-apple"
+							class="icon-apple"
+						/>
+						IOS Download</a
+					>
+					<a href="#" class="btn btn--secondary"
+						><img
+							src="./assets/images/icon-android.svg"
+							alt="icon-android"
+							class="icon-android"
+						/>
+						Android Download</a
+					>
+				</div>
+			</section>
 
-  $4 / month
-
-  iOS Download
-  Android Download
-
-  All rights reserved © Equalizer 2021
-  Have any problems? Contact us via social media or email us at equalizer@example.com
-
-</body>
+			<footer class="footer">
+				<div class="logo-box">
+					<img
+						src="./assets/images/logo.svg"
+						alt="equalizer logo"
+						class="logo"
+					/>
+				</div>
+				<div class="footer__copyrights">
+					<p class="footer__content">
+						All rights reserved © Equalizer 2021 Have any problems? Contact us
+						via social media or email us at
+						<span class="fw-700">equalizer@example.com</span>
+					</p>
+				</div>
+				<div class="footer__social">
+					<a
+						href="https://www.facebook.com/"
+						target="_blank"
+						aria-label="facebook icon"
+						><img
+							src="./assets/images/icon-facebook.svg"
+							alt="facebook icon"
+							class="footer__social-icon"
+					/></a>
+					<a
+						href="https://www.instagram.com/"
+						target="_blank"
+						aria-label="instagram icon"
+						><img
+							src="./assets/images/icon-instagram.svg"
+							alt="facebook icon"
+							class="footer__social-icon"
+					/></a>
+					<a
+						href="https://twitter.com/"
+						target="_blank"
+						aria-label="twitter icon"
+						><img
+							src="./assets/images/icon-twitter.svg"
+							alt="facebook icon"
+							class="footer__social-icon"
+					/></a>
+				</div>
+			</footer>
+		</div>
+	</body>
 </html>
