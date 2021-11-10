@@ -1,0 +1,220 @@
+.container {
+	max-width: $max-width-1;
+	margin: 0 auto;
+
+	@include respond(tab-port) {
+		max-width: $max-width-2;
+	}
+
+	@include respond(phone) {
+		max-width: $max-width-3;
+	}
+}
+
+.header {
+	padding: 6.2rem 0;
+
+	@include respond(tab-port) {
+		padding-bottom: 9.5rem;
+	}
+
+	&::after {
+		content: url('../images/bg-pattern-1.svg');
+		position: absolute;
+		top: -5rem;
+		right: 0;
+		z-index: -1;
+
+		@include respond(tab-port) {
+			right: -5rem;
+		}
+
+		@include respond(phone) {
+			content: none;
+		}
+	}
+}
+
+.showcase {
+	max-width: 80%;
+	padding-bottom: 10rem;
+
+	@include respond(tab-port) {
+		max-width: 70%;
+	}
+
+	@include respond(phone) {
+		max-width: 100%;
+	}
+
+	&__heading {
+		font-size: 8.8rem;
+		font-weight: bold;
+		line-height: 8.8rem;
+		margin-bottom: 4rem;
+
+		@include respond(tab-port) {
+			font-size: 6.4rem;
+			line-height: 6.4rem;
+		}
+
+		@include respond(phone) {
+			font-size: 4rem;
+			line-height: 4.8rem;
+			margin-bottom: 2rem;
+		}
+	}
+}
+
+.equalizer {
+	background: url('../images/bg-pattern-2.svg') no-repeat center center/auto
+		$color-primary-dark;
+	border-radius: 1.2rem;
+	position: relative;
+	margin-top: 20rem;
+	height: 60rem;
+
+	@include respond(tab-port) {
+		margin-top: 10rem;
+	}
+
+	@include respond(phone) {
+		margin-top: 10rem;
+	}
+
+	&-card {
+		background-color: $color-secondary-dark;
+		width: 45rem;
+		position: absolute;
+		top: 9rem;
+		right: 9rem;
+		color: $color-primary-light;
+		padding: 5.6rem;
+		border-radius: 1.2rem;
+
+		@include respond(tab-port) {
+			width: 40rem;
+			top: 20rem;
+			right: 5rem;
+		}
+
+		@include respond(phone) {
+			width: 100%;
+			top: 45rem;
+			right: 50%;
+			transform: translateX(50%);
+			padding: 4.8rem 3.6rem;
+		}
+
+		@include respond(small-phone) {
+			top: 30rem;
+			padding: 2rem;
+		}
+
+		&__heading {
+			font-size: 4rem;
+			line-height: 5.2rem;
+			margin-bottom: 2.2rem;
+
+			@include respond(tab-port) {
+				font-size: 3.2rem;
+				line-height: 4rem;
+			}
+		}
+
+		&__content {
+			margin-bottom: 4rem;
+		}
+	}
+
+	&__img {
+		position: absolute;
+		top: -20rem;
+		left: 10rem;
+		width: 30%;
+
+		@include respond(tab-port) {
+			top: -10rem;
+			left: 5rem;
+			width: 40%;
+		}
+
+		@include respond(phone) {
+			top: -12rem;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 70%;
+		}
+	}
+}
+
+.footer {
+	margin-top: 20rem;
+	margin-bottom: 5rem;
+	display: flex;
+	justify-content: space-between;
+
+	@include respond(tab-port) {
+		margin-top: 30rem;
+		display: block;
+	}
+
+	@include respond(phone) {
+		margin-top: 50rem;
+		display: block;
+	}
+
+	@include respond(small-phone) {
+		margin-top: 30rem;
+	}
+
+	&__logo-box {
+		flex: 1;
+	}
+
+	&__content {
+		flex: 2;
+		display: flex;
+		align-items: center;
+
+		@include respond(tab-port) {
+			margin-top: 2rem;
+		}
+
+		@include respond(phone) {
+			display: block;
+			margin-top: 3.2rem;
+		}
+	}
+
+	&__copyrights {
+		flex: 1;
+	}
+
+	&__social {
+		flex: 1;
+		text-align: right;
+
+		@include respond(phone) {
+			text-align: left;
+			margin-top: 6.4rem;
+		}
+
+		&-icon {
+			width: 2rem;
+			height: 2rem;
+			margin-left: 2rem;
+			fill: $color-primary-dark;
+			transition: all 0.2s ease;
+
+			&:hover {
+				fill: $color-secondary-dark;
+			}
+		}
+	}
+
+	&__text {
+		font-size: 1.6rem;
+		line-height: 2.6rem;
+	}
+}

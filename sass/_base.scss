@@ -1,0 +1,81 @@
+// Colors
+$color-primary-dark: #191826;
+$color-primary-light: #fcfaf9;
+$color-secondary-dark: #fa7453;
+$color-secondary-light: #ffb964;
+$color-tertiary: #66e2dc;
+
+// Container
+$max-width-1: 80%;
+$max-width-2: 90%;
+$max-width-3: 95%;
+
+// mixins
+
+@mixin respond($breakpoint) {
+	@if $breakpoint == tab-port {
+		@media only screen and (max-width: 56.25em) {
+			@content; // 900px
+		}
+	}
+
+	@if $breakpoint == phone {
+		@media only screen and (max-width: 37.5em) {
+			@content; // 600px
+		}
+	}
+
+	@if $breakpoint == small-phone {
+		@media only screen and (max-width: 18.75em) {
+			@content; // 300px
+		}
+	}
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	font-size: 62.5%;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'IBM Plex Sans', sans-serif;
+	font-size: 2rem;
+	font-weight: 400;
+	line-height: 3.4rem;
+	background: url('../images/bg-main-desktop.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+
+	@include respond(tab-port) {
+		font-size: 1.8rem;
+		line-height: 2.8rem;
+	}
+
+	@include respond(phone) {
+		font-size: 1.6rem;
+		line-height: 2.6rem;
+		background: url('../images/bg-main-desktop.png');
+		background-position: top;
+		background-size: 180%;
+		background-repeat: no-repeat;
+	}
+}
+
+.display-1 {
+	font-size: 6.5rem;
+	font-weight: bold;
+	line-height: 5.2rem;
+}
+
+.fw-700 {
+	font-weight: 700;
+}
