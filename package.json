@@ -6,7 +6,7 @@
 	"scripts": {
 		"watch:sass": "node-sass sass/main.scss assets/styles/main.comp.css -w",
 		"compile:sass": "node-sass sass/main.scss assets/styles/main.comp.css",
-		"prefix:css": "postcss --use autoprefixer assets/styles/main.comp.css -o assets/styles/main.prefix.css",
+		"prefix:css": "postcss --use autoprefixer -b 'last 10 versions' assets/styles/main.comp.css -o assets/styles/main.prefix.css",
 		"compress:css": "node-sass assets/styles/main.prefix.css assets/styles/main.css --output-style compressed",
 		"build:css": "npm-run-all compile:sass prefix:css compress:css"
 	},
